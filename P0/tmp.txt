@@ -1,0 +1,7 @@
+Este es un fichero o
+archivo temporal que
+vamos a borrar.
+
+Esto sirve para
+aprender a eliminar
+ficheros de la repo....
