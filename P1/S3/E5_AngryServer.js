@@ -9,8 +9,8 @@ const server = http.createServer((req, res) => {
 
   //-- Generar respuesta
   //-- Código: Error. No encontrado
-  res.statusCode = 500;
-  res.statusMessage = "ERROR 500 in Server :-(";
+  res.statusCode = 404;
+  res.statusMessage = "ERROR 404 by Server :-(";
   res.setHeader('Content-Type', 'text/plain');
   res.write("Soy el ANGRY Server\n");
   res.end()
