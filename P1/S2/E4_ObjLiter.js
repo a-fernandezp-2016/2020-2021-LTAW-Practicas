@@ -28,5 +28,5 @@ const valor = objeto1.valor;
 const nombre = objeto1.nombre;
 
 console.log("");
-console.log("Nombre: ", + nombre);
-console.log("Valor: ", + valor);
+console.log("Nombre: " + nombre);
+console.log("Valor: " + valor);
