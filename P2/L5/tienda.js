@@ -29,6 +29,17 @@ tienda["productos"].forEach((element, index)=>{
     console.log("Producto " + (index + 1) + ": " + element.nombre);
 });
 
+//-- Recorrer el array de productos para aumentar el stock en 1.
+tienda["productos"].forEach((element, index)=>{
+    element.stock += 1;
+});
+
+// Convertir de JSON a Variable.
+let mytienda_json = JSON.stringify(tienda);
+
+// Sobreescribir en el fichero json.
+fs.writeFileSync(fichero_tienda, mytienda_json);
+
 // Espacio.
 console.log("");
 
@@ -39,10 +50,20 @@ console.log("Número de pedidos pendientes que hay en la tienda: " + tienda["ped
 tienda["pedidos"].forEach((element, index)=> {
     console.log("Cliente " + (index + 1) + ": " + element.nombre);
     console.log("Dirección: " + element.direccion);
-    console.log("Tarjeta del banco del titular: " + element.tarjetaBancaria);
+    console.log(`Nº de cuenta bancaria de ${element.nombre}: ${element.tarjetaBancaria}`);
+    // Espacio.
+    console.log("");
     element["productos"].forEach((element, index)=>{
         console.log("Nombre del producto: " + element.nombre);
         console.log(`Su valor monetario es de: ${element.precio} €`);
         console.log("Cantidad comprada: " + element.cantidad);
     });
+});
+
+// Espacio.
+console.log("");
+
+//-- Recorrer el array de productos para ver el stock de cada uno de ellos.
+tienda["productos"].forEach((element, index)=>{
+    console.log("Stock del producto " + (index + 1) + ": " + element.stock);
 });
