@@ -71,5 +71,8 @@
     "lint": "eslint . --fix",
     "test": "node tests/basic-test.js && node tests/safe-test.js"
   },
-  "version": "1.4.0"
+  "version": "1.4.0",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
