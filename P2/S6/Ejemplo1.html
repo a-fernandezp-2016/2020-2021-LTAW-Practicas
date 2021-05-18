@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejemplo 1</title>
+    <title>Formulario</title>
 </head>
 <body>
-    <h1>¡Datos Recibidos!</h1>
-    <p>Gracias por su compra</p>
-    <a href="/">Acceso al formulario</a>
+    <form action="/procesar" method="get">
+        Nombre:
+        <input type="text" name="nombre"/>
+        <p></p>
+        Apellidos:
+        <input type="text" name="apellidos" />
+        <p></p>
+          <input type="submit" value="Enviar"/>
+    </form>
 </body>
 </html>
